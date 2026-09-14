@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>标签存档助手</title>
+<style>
+  body {
+    width: 280px;
+    font-family: -apple-system, "Microsoft YaHei", sans-serif;
+    padding: 16px;
+    margin: 0;
+    background: #f7f7f8;
+  }
+  h1 {
+    font-size: 15px;
+    margin: 0 0 12px 0;
+    color: #222;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #saveBtn {
+    background: #4a7dff;
+    color: white;
+  }
+  #saveBtn:hover {
+    background: #3a6ae0;
+  }
+  #restoreBtn {
+    background: #e5e7eb;
+    color: #222;
+  }
+  #restoreBtn:hover {
+    background: #d5d7db;
+  }
+  #status {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+  .option-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #444;
+  }
+  .option-row input {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <h1>📌 标签存档助手</h1>
+  <label class="option-row">
+    <input type="checkbox" id="allWindowsCheckbox" />
+    保存所有浏览器窗口（取消勾选则只保存当前窗口）
+  </label>
+  <button id="saveBtn">保存标签页</button>
+  <button id="restoreBtn">恢复上次保存的标签页</button>
+  <div id="status">正在读取记录...</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
